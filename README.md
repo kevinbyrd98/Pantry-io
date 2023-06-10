@@ -1,0 +1,36 @@
+# Pantry-io
+Personal Project for a pantry application to keep track of items bought and being stored, how much they cost, cost of the pantry etc.
+
+
+
+PANTRY APP:
+
+WHAT DOES IT NEED:
+	1. Some type of denotion of type of food item
+		Stuff to know on each item:
+			A. Date Purchased
+			B. Cost
+			C. Expiration Date (If Available)
+			D. Amount Available (Need to be able to select unit of measure)
+			E. Category(Maybe, not super important)
+			F. Type of Storage(Fridge of Pantry)
+			G. Best Buy Date(Cade)
+			H. Do you want to rebuy
+			I. Type of Grocery Item]
+			J. Mark for a recipe
+			K. Keep Stocked
+WHAT DATA DO YOU NEED TO KNOW ABOUT PANTRY:
+	1. Frequent Items
+	2. Items about to expire/expired
+	3. Items marked for a recipe
+	4. If recpies have enough of each item.
+	5. Cost to restock
+	6. Last Restock 
+	7. Status of Keep stocked items
+What should recipes look like
+	1. List of Ingredients
+	2. Name of Recipe
+	3. Cost of Recipe (Items that need to be bought for recipe, if amount already available N/A)
+	4. Amount needed for Recipe
+	5. Category
+	6. Link to recipe ( If available ) 
