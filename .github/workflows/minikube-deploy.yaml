@@ -1,0 +1,24 @@
+name: Deploy to Minikube
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Minikube
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.MINIKUBE_HOST }}
+          username: ${{ secrets.MINIKUBE_USERNAME }}
+          password: ${{ secrets.MINIKUBE_PASSWORD }}
+          script: |
+            kubectl apply -f deployment.yaml
+            kubectl apply -f service.yaml
