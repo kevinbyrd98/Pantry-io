@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pantry-ingress
+spec:
+  rules:
+    - host: pantry.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pantry-io
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - pantry.io
+      secretName: pantry-tls-secret
