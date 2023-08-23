@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pantry-io
+  labels:
+    app: pantry-io
 spec:
   replicas: 3
   selector:
@@ -13,14 +15,14 @@ spec:
         run: pantry-io
     spec:
       containers:
-      - name: react-application
-        image: kevinbyrd98/pantry-io:latest
-        ports:
-          - containerPort: 80
-        imagePullPolicy: Always
-        resources:
-          limits:
-            memory: 512Mi
-            cpu: 200m
-        securityContext:
-          allowPrivilegeEscalation: false
+        - name: react-application
+          image: kevinbyrd98/pantry-io:latest
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: 200m
+          securityContext:
+            allowPrivilegeEscalation: false
