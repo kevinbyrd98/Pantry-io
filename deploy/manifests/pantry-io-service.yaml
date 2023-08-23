@@ -4,7 +4,7 @@ metadata:
   name: pantry-io
 spec:
   selector:
-    app: pantry-io
+    run: pantry-io
   ports:
     - protocol: TCP
       port: 80

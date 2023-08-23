@@ -6,11 +6,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: pantry-io
+      run: pantry-io
   template:
     metadata:
       labels:
-        app: pantry-io
+        run: pantry-io
     spec:
       containers:
         - name: react-application
