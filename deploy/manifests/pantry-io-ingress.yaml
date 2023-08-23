@@ -16,5 +16,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - api.example.com
+        - pantryio.example.com
       secretName: pantry-tls-secret

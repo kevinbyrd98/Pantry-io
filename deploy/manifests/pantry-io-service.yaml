@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pantry-io
+  name: pantry-io-service
 spec:
   selector:
     run: pantry-io

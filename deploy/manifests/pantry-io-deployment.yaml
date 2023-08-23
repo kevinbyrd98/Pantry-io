@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pantry-io
+  name: pantry-io-deployment
 spec:
   replicas: 3
   selector:
@@ -13,7 +13,7 @@ spec:
         run: pantry-io
     spec:
       containers:
-        - name: react-application
+        - name: pantry-io
           image: kevinbyrd98/pantry-io:latest
           ports:
             - containerPort: 80
