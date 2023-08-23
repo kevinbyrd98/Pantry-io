@@ -4,7 +4,7 @@ metadata:
   name: pantry--io-ingress
 spec:
   rules:
-    - host: api.example.com
+    - host: pantryio.example.com
       http:
         paths:
           - path: /

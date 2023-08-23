@@ -2,17 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pantry-io
-  labels:
-    app: pantry-io
 spec:
   replicas: 3
   selector:
     matchLabels:
-      run: pantry-io
+      app: pantry-io
   template:
     metadata:
       labels:
-        run: pantry-io
+        app: pantry-io
     spec:
       containers:
         - name: react-application
