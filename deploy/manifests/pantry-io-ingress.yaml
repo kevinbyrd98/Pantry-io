@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pantry--io-ingress
+  name: pantry-io-ingress
 spec:
   rules:
     - host: pantryio.example.com
