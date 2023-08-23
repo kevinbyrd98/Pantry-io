@@ -4,7 +4,7 @@ metadata:
   name: pantry--io-ingress
 spec:
   rules:
-    - host: pantry.io
+    - host: api.example.com
       http:
         paths:
           - path: /
@@ -16,5 +16,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - pantry.io
+        - api.example.com
       secretName: pantry-tls-secret

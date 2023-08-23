@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: pantry-io
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       run: pantry-io
