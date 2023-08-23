@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pantry-io
+spec:
+  selector:
+    app: pantry-io
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
