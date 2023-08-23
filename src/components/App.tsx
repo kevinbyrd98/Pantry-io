@@ -10,7 +10,7 @@ const App: React.FC = () => {
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
-      amountOfItem: '2 pounds',
+      amountOfItem: '19 pounds',
       rebuyItem: true,
       itemType: 'Produce',
       inRecipe: ['Salad'],
