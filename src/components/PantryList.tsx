@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, List } from '@mui/material';
+import { Typography } from '@mui/material';
+import  ListGroup  from 'react-bootstrap/ListGroup';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import PantryListItem from './PantryListItem';
 import { IPantryItem } from '../interfaces';
@@ -26,7 +27,7 @@ const PantryList: React.FC<PantryListProps> = ({ pantryItems, onReorder, onItemU
       <Typography variant="h5">Pantry List</Typography>
       <Droppable droppableId="pantryItems">
         {(provided) => (
-          <List {...provided.droppableProps} ref={provided.innerRef}>
+          <ListGroup {...provided.droppableProps} ref={provided.innerRef}>
             {pantryItems.map((item, index) => (
               <PantryListItem
                 key={index}
@@ -36,7 +37,7 @@ const PantryList: React.FC<PantryListProps> = ({ pantryItems, onReorder, onItemU
               />
             ))}
             {provided.placeholder}
-          </List>
+          </ListGroup>
         )}
       </Droppable>
     </DragDropContext>

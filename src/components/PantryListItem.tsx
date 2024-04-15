@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ListItem, ListItemText, TextField, Checkbox } from '@mui/material';
+import {  ListItemText, TextField, Checkbox } from '@mui/material';
+import { ListGroupItem } from 'react-bootstrap';
 
 interface IPantryItem {
   datePurchased: string;
@@ -37,7 +38,7 @@ const PantryListItem: React.FC<PantryListItemProps> = ({ item, index, onItemUpda
   };
 
   return (
-    <ListItem>
+    <ListGroupItem>
       {editing ? (
         <>
           <TextField
@@ -94,7 +95,7 @@ const PantryListItem: React.FC<PantryListItemProps> = ({ item, index, onItemUpda
           <button onClick={() => setEditing(true)}>Edit</button>
         </>
       )};
-    </ListItem>
+    </ListGroupItem>
   );
 };
 
