@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
-import {  ListItemText, TextField, Checkbox } from '@mui/material';
+import { Card, CardHeader, CardTitle } from '../../@/components/ui/card';
 import { ListGroupItem } from 'react-bootstrap';
-
-interface IPantryItem {
-  datePurchased: string;
-  itemCost: number;
-  expirationDate: string;
-  amountOfItem: string;
-  rebuyItem?: boolean;
-  itemType: string;
-  inRecipe?: string[];
-  keepStocked?: boolean;
-}
+import { ListItemText } from '@mui/material';
+import { IPantryItem } from 'interfaces';
 
 interface PantryListItemProps {
   item: IPantryItem;
@@ -41,46 +32,12 @@ const PantryListItem: React.FC<PantryListItemProps> = ({ item, index, onItemUpda
     <ListGroupItem>
       {editing ? (
         <>
-          <TextField
-            label="Date Purchased"
-            value={editedFields.datePurchased || item.datePurchased}
-            onChange={(e: { target: { value: any; }; }) => handleFieldChange('datePurchased', e.target.value)}
-          />
-          <TextField
-            label="Item Cost"
-            type="number"
-            value={editedFields.itemCost || item.itemCost}
-            onChange={(e: { target: { value: any; }; }) => handleFieldChange('itemCost', Number(e.target.value))}
-          />
-          <TextField
-            label="Expiration Date"
-            value={editedFields.expirationDate || item.expirationDate}
-            onChange={(e: { target: { value: any; }; }) => handleFieldChange('expirationDate', e.target.value)}
-          />
-          <TextField
-            label="Amount of Item"
-            value={editedFields.amountOfItem || item.amountOfItem}
-            onChange={(e: { target: { value: any; }; }) => handleFieldChange('amountOfItem', e.target.value)}
-          />
-          <Checkbox
-            checked={editedFields.rebuyItem ?? item.rebuyItem}
-            onChange={(e) => handleFieldChange('rebuyItem', e.target.checked)}
-          />
-          <TextField
-            label="Item Type"
-            value={editedFields.itemType || item.itemType}
-            onChange={(e: { target: { value: any; }; }) => handleFieldChange('itemType', e.target.value)}
-          />
-          <TextField
-            label="In Recipe"
-            value={editedFields.inRecipe ? editedFields.inRecipe.join(', ') : item.inRecipe?.join(', ')}
-            onChange={(e: { target: { value: string; }; }) => handleFieldChange('inRecipe', e.target.value.split(', '))}
-          />
-          <Checkbox
-            checked={editedFields.rebuyItem ?? item.rebuyItem}
-            onChange={(e) => handleFieldChange('rebuyItem', e.target.checked)}
-          />
-          <button onClick={handleSaveEdit}>Save</button>
+          <Card>
+            <CardHeader>
+              item.itemName
+            </CardHeader>
+
+          </Card>
         </>
       ) : (
         <>

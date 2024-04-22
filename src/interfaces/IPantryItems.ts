@@ -1,4 +1,5 @@
 export interface IPantryItem{
+    itemName: string;
     datePurchased: string;
     itemCost: number;
     expirationDate: string;

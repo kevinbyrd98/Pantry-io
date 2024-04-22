@@ -7,6 +7,7 @@ import { IPantryItem } from '../interfaces';
 const App: React.FC = () => {
   const [pantryItems, setPantryItems] = useState<IPantryItem[]>([
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -27,6 +29,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -37,6 +40,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -47,6 +51,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -57,6 +62,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -67,6 +73,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',
@@ -77,6 +84,7 @@ const App: React.FC = () => {
       keepStocked: true,
     },
     {
+      itemName: "flour",
       datePurchased: '2023-06-01',
       itemCost: 10,
       expirationDate: '2023-07-01',

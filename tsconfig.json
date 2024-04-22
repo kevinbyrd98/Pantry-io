@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    },
+    "baseUrl": "./src",
     "target": "es5",
     "lib": [
       "dom",
@@ -25,6 +22,7 @@
     "jsx": "preserve"
   },
   "include": [
-    "src"
+    "src",
+    "@"
   ]
 }
